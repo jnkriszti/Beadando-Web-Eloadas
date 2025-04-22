@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 API-k</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="html5.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="tabla.html">Táblázat</a></li>
+      <li><a href="html5.html" class="active">HTML5 API</a></li>
+      <li><a href="chart.html">ChartJS</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="oojs.html">OOJS</a></li>
+    </ul>
+  </nav>
+
+  <aside>
+    <p>Html5, API-k bemutatása</p>
+  </aside>
+
+
+  <div id="content">
+
+    <h2>HTML5, API-k</h2>
+
+    <section>
+      <h3>1. Web Storage (localStorage)</h3>
+      <input id="storageInput" type="text" placeholder="Írj be valamit...">
+      <button onclick="saveToStorage()">Mentés</button>
+      <p id="storageOutput"></p>
+    </section>
+
+    <section>
+      <h3>2. Web Worker</h3>
+      <button onclick="startWorker()">Számítás indítása</button>
+      <p id="workerOutput"></p>
+    </section>
+
+    <section>
+      <h3>3. Geolocation API</h3>
+      <button onclick="getLocation()">Hely meghatározása</button>
+      <p id="geoOutput"></p>
+    </section>
+
+    <section>
+      <h3>4. Drag and Drop</h3>
+      <div id="drag" draggable="true" ondragstart="drag(event)">🟦 Húzz engem</div>
+      <div id="dropZone" ondrop="drop(event)" ondragover="allowDrop(event)">⬜ Dobd ide</div>
+    </section>
+
+    <section>
+      <h3>5. Canvas</h3>
+      <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000;"></canvas>
+    </section>
+
+    <section>
+      <h3>6. SVG</h3>
+      <svg width="200" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+      </svg>
+    </section>
+
+    <section>
+      <h3>7. Server-Sent Events (SSE)</h3>
+      <pre><code>
+const evtSource = new EventSource("demo_sse.php");
+evtSource.onmessage = (event) => {
+  console.log("Üzenet: ", event.data);
+};
+      </code></pre>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Készítő: Jóni Krisztina Vivien, Neptun: DNHDQM</p>
+  </footer>
+</body>
+</html>

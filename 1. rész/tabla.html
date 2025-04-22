@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Táblázat</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="tabla.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="tabla.html" class="active">Táblázat</a></li>
+      <li><a href="html5.html">HTML5 API</a></li>
+      <li><a href="chart.html">ChartJS</a></li>
+      <li><a href="ajax.html">AJAX</a></li>
+      <li><a href="oojs.html">OOJS</a></li>
+    </ul>
+  </nav>
+
+  <aside>
+    <p>CRUD műveletek táblázattal.</p>
+  </aside>
+
+  <div id="content">
+    <h2>CRUD Táblázat</h2>
+    <input type="text" id="search" placeholder="Keresés..." />
+
+    <form id="crud-form">
+      <input type="text" placeholder="Név" required />
+      <input type="text" placeholder="Kor" required />
+      <input type="text" placeholder="Város" required />
+      <input type="text" placeholder="Email" required />
+      <button type="submit">Mentés</button>
+    </form>
+
+    <table id="data-table" border="1">
+        <thead>
+          <tr>
+            <th class="sortable">Név</th>
+            <th class="sortable">Kor</th>
+            <th class="sortable">Város</th>
+            <th class="sortable">Email</th>
+            <th>Művelet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dinamikus sorok -->
+        </tbody>
+      </table>
+  </div>
+
+  <footer>
+    <p>Készítő: Jóni Krisztina Vivien, Neptun: DNHDQM</p>
+  </footer>
+</body>
+</html>
