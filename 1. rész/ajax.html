@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AJAX feladat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Főoldal</a></li>
+      <li><a href="tabla.html">Táblázat</a></li>
+      <li><a href="html5.html">HTML5 API</a></li>
+      <li><a href="chart.html">ChartJS</a></li>
+      <li><a href="ajax.html" class="active">AJAX</a></li>
+      <li><a href="oojs.html">OOJS</a></li>
+    </ul>
+  </nav>
+
+  <aside>
+    <p>AJAX menüpont</p>
+  </aside>
+
+  <div id="content">
+    <h2>AJAX feladat</h2>
+
+    <section>
+      <h3>Read - Adatok lekérése</h3>
+      <button onclick="readData()">Adatok lekérése</button>
+      <div id="dataList"></div>
+      <div id="stats"></div>
+    </section>
+
+    <section>
+      <h3>Create - Új adat hozzáadása</h3>
+      <input type="text" id="createName" placeholder="Név" />
+      <input type="text" id="createHeight" placeholder="Magasság" />
+      <input type="text" id="createWeight" placeholder="Súly" />
+      <button onclick="createData()">Hozzáadás</button>
+      <div id="createMsg"></div>
+    </section>
+
+    <section>
+      <h3>Update - Adat módosítása</h3>
+      <input type="text" id="updateId" placeholder="ID" />
+      <button onclick="getDataForId()">Adatok betöltése</button><br />
+      <input type="text" id="updateName" placeholder="Név" />
+      <input type="text" id="updateHeight" placeholder="Magasság" />
+      <input type="text" id="updateWeight" placeholder="Súly" />
+      <button onclick="updateData()">Módosítás</button>
+      <div id="updateMsg"></div>
+    </section>
+
+    <section>
+      <h3>Delete - Adat törlése</h3>
+      <input type="text" id="deleteId" placeholder="ID" />
+      <button onclick="deleteData()">Törlés</button>
+      <div id="deleteMsg"></div>
+    </section>
+  </div>
+
+  <footer>
+    <p>Készítő: Jóni Krisztina Vivien, Neptun: DNHDQM</p>
+  </footer>
+
+  <script src="ajax.js"></script>
+</body>
+</html>
